@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/endf_parserpy-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/endf_parserpy-{{ version }}.tar.gz
   sha256: 9b59e1524ac0051e3fe77c8967345379af8cb03e6e8e4b4d95461a86d53eb133
 
 build:
@@ -16,7 +16,7 @@ build:
   entry_points:
     - endf-cli = endf_parserpy.cli.cmd:cli_interface
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
